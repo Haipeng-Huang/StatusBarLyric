@@ -1,7 +1,13 @@
 name: Android CI Canary
 
 on:
+  repository_dispatch:
   workflow_dispatch:
+    inputs:
+      none:
+        description: 'none'
+        required: false
+        default: 'false'
   push:
     branches: [ kt ]
 
